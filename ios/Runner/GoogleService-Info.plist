@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>404036469767-n1fgvk26g2kl4a28hlhup0aeeuv3ug3o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.404036469767-n1fgvk26g2kl4a28hlhup0aeeuv3ug3o</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>404036469767-hmc0ntq6u8oj5ju9v8eir6ed7v06d0p7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7OK-IZEMRHkxsiVsBMvmY4n7sixLnWF0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>404036469767</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ariansproject.flutterPresenceApps</string>
+	<key>PROJECT_ID</key>
+	<string>dbikein</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dbikein.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:404036469767:ios:3582b2a586439b2bb016a2</string>
+	<key>DATABASE_URL</key>
+	<string>https://dbikein.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "874959255120",
+    "project_id": "presenceapps-d1a29",
+    "storage_bucket": "presenceapps-d1a29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874959255120:android:bf0fd31dd26765affac355",
+        "android_client_info": {
+          "package_name": "com.ariansproject.flutter_presence_apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874959255120-j05e9g306lpbpac0q4rgqv1jl60254gk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLWyosEv9eW1Eq1LMlD7uxm5j7F-Uf_uM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874959255120-j05e9g306lpbpac0q4rgqv1jl60254gk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
