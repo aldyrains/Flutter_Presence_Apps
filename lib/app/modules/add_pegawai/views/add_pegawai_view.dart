@@ -42,10 +42,14 @@ class AddPegawaiView extends GetView<AddPegawaiController> {
               height: 30,
             ),
             ElevatedButton(
-                onPressed: () {
-                  controller.addPegawai();
+                onPressed: () async {
+                  if(controller.isLoading.isFalse){
+                  await controller.addPegawai();
+
+                  }
                 },
-                child: Text('Add Pegawai'))
+              child: Text(controller.isLoading.isFalse ? 'Add Pegawai' : 'loading...' ),
+              )
           ],
         ));
   }

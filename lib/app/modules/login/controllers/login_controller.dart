@@ -7,11 +7,13 @@ import 'package:get/get.dart';
 import '../../../routes/app_pages.dart';
 
 class LoginController extends GetxController {
+  RxBool isLoading = false.obs;
   TextEditingController emailC = TextEditingController();
   TextEditingController passC = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
 
-  void login() async {
+  Future<void> login() async {
+    isLoading.value = true;
     if (emailC.text.isNotEmpty && passC.text.isNotEmpty) {
       try {
         UserCredential userCredential = await auth.signInWithEmailAndPassword(
@@ -32,7 +34,10 @@ class LoginController extends GetxController {
                     "Kamu belum verifiasi akun ini. Lakukan verifikasi diemail kamu.",
                 actions: [
                   OutlinedButton(
-                    onPressed: () => Get.back(), //tutup dialog
+                    onPressed: () {
+                      isLoading.value = false;
+                      Get.back();
+                    }, //tutup dialog
                     child: Text("Cancel"),
                   ),
                   ElevatedButton(
@@ -45,6 +50,8 @@ class LoginController extends GetxController {
                       } catch (e) {
                         Get.snackbar("Terjadi Kesalahan",
                             "Tidak dapat mengirim email verifikasi. Hubungi Admin atau customer service");
+                      } finally {
+                        isLoading.value = false;
                       }
                     }, //tutup dialog
                     child: Text("Kirim Ulang"),
@@ -52,13 +59,16 @@ class LoginController extends GetxController {
                 ]);
           }
         }
+        isLoading.value = false;
       } on FirebaseAuthException catch (e) {
+        isLoading.value = false;
         if (e.code == 'user-not-found') {
           Get.snackbar("Terjadi Kesalahan", "Email Tidak Terdaftar");
         } else if (e.code == 'wrong-password') {
           Get.snackbar("Terjadi Kesalahan", "Password Salah");
         }
       } catch (e) {
+        isLoading.value = false;
         Get.snackbar("Terjadi Kesalahan", "Email dan Password wajib diisi");
       }
     } else {
