@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_presence_apps/app/routes/app_pages.dart';
 
 import 'package:get/get.dart';
 
@@ -35,16 +36,21 @@ class LoginView extends GetView<LoginController> {
           SizedBox(
             height: 20,
           ),
-          Obx(()=>
-             ElevatedButton(
-                onPressed: () async{
-                  if(controller.isLoading.isFalse){
-                 await controller.login();
+          Obx(
+            () => ElevatedButton(
+                onPressed: () async {
+                  if (controller.isLoading.isFalse) {
+                    await controller.login();
                   }
                 },
-                child: Text(controller.isLoading.isFalse ? "Login" : "Loading...")),
+                child: Text(
+                    controller.isLoading.isFalse ? "Login" : "Loading...")),
           ),
-          TextButton(onPressed: () {}, child: Text("Lupa Password?"))
+          TextButton(
+              onPressed: () {
+                Get.toNamed(Routes.FORGOT_PASSWORD);
+              },
+              child: Text("Lupa Password?"))
         ],
       ),
     );
